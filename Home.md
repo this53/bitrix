@@ -5,7 +5,7 @@
 * [Класс компонента(class.php) оформления заказа - минимальный набор (d7)](https://gist.github.com/SidiGi/2f1c3ba4590ebe8460a6ed44e6f4d7d6)
 * [Как добавить товар в корзину без автоматического пересчёта цены](https://gist.github.com/SidiGi/2e75beccd278bb5a8ab37c1540aae6d2)
 
-## Файл настроек (.setting.php)
+## Файл настроек (.settings.php)
 * [Основная инфомрация](https://gist.github.com/SidiGi/f6ceccd9e7bdd1d5e12e)
 * [Кэширование](https://gist.github.com/SidiGi/3d59c415593549d73d6c)
 * [Логирование (монолог адаптер)](https://github.com/bitrix-expert/monolog-adapter)
