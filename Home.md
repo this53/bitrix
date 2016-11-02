@@ -52,5 +52,4 @@
 * [Компонент сортировки](https://github.com/SidiGi/bitrix.sort.panel.component)
 * [Работа с BigData (минимальный набор)](https://github.com/SidiGi/bx-simple-bigdata)
 
-## Модули
-* [Вывод данных (отладочной информации)](https://github.com/SidiGi/shantilab.bxeco)
+[Модули](https://github.com/SidiGi/bitrix-info/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D0%B8)
