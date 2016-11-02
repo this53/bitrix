@@ -48,8 +48,5 @@
 * [Дамп в файл](https://gist.github.com/SidiGi/b7748b4bf2d070cb8b48)
 * [Класс для вывода данных](https://gist.github.com/SidiGi/f42463b8e7a743de0c29)
 
-## Компоненты
-* [Компонент сортировки](https://github.com/SidiGi/bitrix.sort.panel.component)
-* [Работа с BigData (минимальный набор)](https://github.com/SidiGi/bx-simple-bigdata)
-
+[Компоненты](https://github.com/SidiGi/bitrix-info/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D1%8B)
 [Модули](https://github.com/SidiGi/bitrix-info/wiki/%D0%9C%D0%BE%D0%B4%D1%83%D0%BB%D0%B8)
