@@ -1,6 +1,7 @@
 # Работа с системой битрикс
 
 ## Работа с заказом битрикс
+* [Работа с корзиной](https://github.com/SidiGi/bitrix-info/wiki/%D0%A0%D0%B0%D0%B1%D0%BE%D1%82%D0%B0-%D1%81-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D0%BE%D0%B9)
 * [Оформление заказа (API d7)](https://gist.github.com/SidiGi/751d1ffcbbb40d157d3a0bae395f9193)
 * [Класс компонента(class.php) оформления заказа - минимальный набор (d7)](https://gist.github.com/SidiGi/2f1c3ba4590ebe8460a6ed44e6f4d7d6)
 * [Как добавить товар в корзину без автоматического пересчёта цены](https://gist.github.com/SidiGi/2e75beccd278bb5a8ab37c1540aae6d2)
