@@ -13,7 +13,6 @@
 ## Работа с заказом
 * [Оформление заказа (API d7)](https://gist.github.com/SidiGi/751d1ffcbbb40d157d3a0bae395f9193)
 * [Класс компонента(class.php) оформления заказа - минимальный набор (d7)](https://gist.github.com/SidiGi/2f1c3ba4590ebe8460a6ed44e6f4d7d6)
-* [Как добавить товар в корзину без автоматического пересчёта цены](https://gist.github.com/SidiGi/2e75beccd278bb5a8ab37c1540aae6d2)
 
 ## Файл настроек (.settings.php)
 * [Основная инфомрация](https://gist.github.com/SidiGi/f6ceccd9e7bdd1d5e12e)
