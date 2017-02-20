@@ -49,9 +49,7 @@
 * [Стандартная форма](https://gist.github.com/SidiGi/eb2f5b85e00098a8d6b4)
 * [Поддержка эрмитажа в шаблоне компонента](https://gist.github.com/SidiGi/43dd349da1fed12e1621)
 * [Страница без хедера и футера](https://gist.github.com/SidiGi/aacee4d68002b6d0a1e1)
-* [Проброс кэширования в component_epilog.php](https://gist.github.com/SidiGi/32ec9c116e3cef5c005e)
-* [.htaccess по умолчанию](https://gist.github.com/SidiGi/03ff0f0b9f55a2a33fb4)
-* [Минимальный набор в хедере и футере](https://gist.github.com/SidiGi/076f2546350c95512d24)
+* [Проброс кэширования в component_epilog.php](https://github.com/SidiGi/bitrix-info/wiki/%D0%9F%D1%80%D0%BE%D0%B1%D1%80%D0%BE%D1%81-%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%B8%D0%B7-%D0%BA%D1%8D%D1%88%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D0%BE%D0%B9-%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B0-%D0%B2-component_epilog.php)
 * [Шаблон для создания своего компонента](https://github.com/SidiGi/bx-boilerplate)
 
 ## ORM
