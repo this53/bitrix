@@ -41,7 +41,7 @@
 * [Как узнать административный раздел](https://gist.github.com/SidiGi/e81f51d66af2d5ff2608)
 * [Как работать с init.php](https://gist.github.com/SidiGi/e593885cf9954a565b16)
 * [Автозагрузка классов](https://gist.github.com/SidiGi/f49846a9c0704c9277ba)
-* [Подписывание на события системы](https://gist.github.com/SidiGi/00fce260ee1fa0f2d433)
+* [Подписывание на события системы](https://github.com/SidiGi/bitrix-info/wiki/%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B)
 * [Работа с глобальной переменной $_REQUEST](https://gist.github.com/SidiGi/b7748b4bf2d070cb8b48)
 * [Переменные серверного окружения ($_SERVER)](https://gist.github.com/SidiGi/f18abd008822cec9b46e)
 * [Иерархия выбрасываемых исключений](https://gist.github.com/SidiGi/2e6087ed9e6c08fb1c95)
