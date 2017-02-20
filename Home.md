@@ -39,7 +39,7 @@
 
 ## Прочее
 * [Как узнать административный раздел](https://gist.github.com/SidiGi/e81f51d66af2d5ff2608)
-* [Как работать с init.php](https://gist.github.com/SidiGi/e593885cf9954a565b16)
+* [Как работать с init.php](https://github.com/SidiGi/bitrix-info/wiki/%D0%9A%D0%B0%D0%BA-%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C-%D1%81-init.php)
 * [Автозагрузка классов](https://github.com/SidiGi/bitrix-info/wiki/%D0%90%D0%B2%D1%82%D0%BE%D0%B7%D0%B0%D0%B3%D1%80%D1%83%D0%B7%D0%BA%D0%B0-%D0%BA%D0%BB%D0%B0%D1%81%D1%81%D0%BE%D0%B2)
 * [Подписывание на события системы](https://github.com/SidiGi/bitrix-info/wiki/%D0%9F%D0%BE%D0%B4%D0%BF%D0%B8%D1%81%D1%8B%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-%D1%81%D0%BE%D0%B1%D1%8B%D1%82%D0%B8%D1%8F-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B)
 * [Работа с глобальной переменной $_REQUEST](https://gist.github.com/SidiGi/b7748b4bf2d070cb8b48)
