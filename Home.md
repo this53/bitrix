@@ -11,7 +11,7 @@
 * [Добавление изменение свойства товара корзины (D7)](https://github.com/SidiGi/bitrix-info/wiki/%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8%D0%B7%D0%BC%D0%B5%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%B2%D0%BE%D0%B9%D1%81%D1%82%D0%B2%D0%B0-%D1%82%D0%BE%D0%B2%D0%B0%D1%80%D0%B0-%D0%BA%D0%BE%D1%80%D0%B7%D0%B8%D0%BD%D1%8B-(D7))
 
 ## Работа с заказом
-* [Оформление заказа (API d7)](https://gist.github.com/SidiGi/751d1ffcbbb40d157d3a0bae395f9193)
+* [Оформление заказа (API d7)](https://github.com/SidiGi/bitrix-info/wiki/%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0-(d7))
 * [Класс компонента(class.php) оформления заказа - минимальный набор (d7)](https://gist.github.com/SidiGi/2f1c3ba4590ebe8460a6ed44e6f4d7d6)
 
 ## Файл настроек (.settings.php)
