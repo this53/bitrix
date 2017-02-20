@@ -60,7 +60,7 @@
 
 ## Отладка
 * [SQL трекер](https://gist.github.com/SidiGi/340c5b19aeefa117aea0)
-* [Дамп в файл](https://gist.github.com/SidiGi/b7748b4bf2d070cb8b48)
+* [Дамп в файл](https://github.com/SidiGi/bitrix-info/wiki/%D0%94%D0%B0%D0%BC%D0%BF-%D0%B2-%D1%84%D0%B0%D0%B9%D0%BB)
 * [Класс для вывода данных](https://github.com/SidiGi/bitrix-info/wiki/%D0%9A%D0%BB%D0%B0%D1%81%D1%81-%D0%B4%D0%BB%D1%8F-%D0%B2%D1%8B%D0%B2%D0%BE%D0%B4%D0%B0-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85)
 
 [Компоненты](https://github.com/SidiGi/bitrix-info/wiki/%D0%9A%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D1%8B)
