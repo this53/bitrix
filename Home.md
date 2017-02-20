@@ -26,7 +26,7 @@
 * [Настройка кэширования](https://gist.github.com/SidiGi/3d59c415593549d73d6c)
 * [Подключение своего типа кэширования](https://gist.github.com/SidiGi/6f429d9e026a735a2946)
 * [Очистка кэша по тегу](https://gist.github.com/SidiGi/648d5d92e053239f6b9b)
-* [Кэширование своей переменной](https://gist.github.com/SidiGi/fbda9573886ae8583cd2)
+* [Кэширование своей переменной](https://github.com/SidiGi/bitrix-info/wiki/%D0%9A%D1%8D%D1%88%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81%D0%B2%D0%BE%D0%B5%D0%B9-%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9)
 
 ## Highload blocks
 * [Работа с highload](https://gist.github.com/SidiGi/10406ce7029f6adba1ee)
