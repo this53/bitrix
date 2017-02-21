@@ -128,3 +128,290 @@ $q->setSelect(array('ISBN', 'TITLE', 'PUBLISH_DATE'));
 $q->setFilter(array('=ID' => 1));
 $result = $q->exec();
 ```
+
+## References
+```php
+<?php
+namespace SomePartner\MyBooksCatalog;
+
+use Bitrix\Main\Entity;
+
+class AuthorTable extends Entity\DataManager
+{
+    public static function getTableName()
+    {
+        return 'my_book_author';
+    }
+
+    public static function getMap()
+    {
+        return array(
+            new Entity\IntegerField('ID', array(
+                'primary' => true,
+                'autocomplete' => true
+            )),
+            new Entity\StringField('NAME'),
+            new Entity\StringField('LAST_NAME')
+        );
+    }
+}
+
+class BookTable extends Entity\DataManager
+{
+    ...
+    public static function getMap()
+    {
+        return array(
+            ...
+            new Entity\IntegerField('AUTHOR_ID'),
+            new Entity\ReferenceField(
+                'AUTHOR',
+                'SomePartner\MyBooksCatalog\Author',
+                array('=this.AUTHOR_ID' => 'ref.ID'),
+            )
+        );
+    }
+    ...
+}
+
+BookTable::getList(array(
+    'select' => array('TITLE', 'AUTHOR.NAME', 'AUTHOR.LAST_NAME')
+));
+
+$author_type = 5;
+
+new Entity\ReferenceField(
+    'AUTHOR',
+    'SomePartner\MyBooksCatalog\Author',
+    array(
+        '=this.AUTHOR_ID' => 'ref.ID',
+        '=ref.TYPE' => new DB\SqlExpression('?i', $author_type)
+    )
+)
+
+\SomePartner\MyBooksCatalog\AuthorTable::getList(array(
+    'select' => array(
+        'NAME',
+        'LAST_NAME',
+        'BOOK_TITLE' => '\SomePartner\MyBooksCatalog\BookTable:AUTHOR.TITLE'
+    )
+));
+```
+
+## Table
+```php
+<?php
+//module (my.module)
+namespace My\Module;
+
+    use Bitrix\Main\Entity;
+    use Bitrix\Main\Localization\Loc;
+    Loc::loadMessages(__FILE__);
+
+
+    class MyTable extends Entity\DataManager
+    {
+        public static function getFilePath()
+        {
+            return __FILE__;
+        }
+
+        public static function getTableName()
+        {
+            return 'my_module_table';
+        }
+        
+        public static function onBeforeAdd(Entity\Event $event)
+        {
+            $result = new Entity\EventResult;
+            $data = $event->getParameter("fields");
+    
+            if (isset($data['ISBN']))
+            {
+                $cleanIsbn = str_replace('-', '', $data['ISBN']);
+                $result->modifyFields(array('ISBN' => $cleanIsbn));
+            }
+    
+            return $result;
+        }
+        
+        public static function onBeforeUpdate(Entity\Event $event)
+        {
+           $result = new Entity\EventResult;
+           $data = $event->getParameter("fields");
+        
+           if (isset($data['ISBN']))
+           {
+              $result->unsetFields(array('ISBN'));
+           }
+        
+           return $result;
+           
+           //or
+           $result = new Entity\EventResult;
+            $data = $event->getParameter("fields");
+        
+            if (isset($data['ISBN']))
+            {
+                $result->addError(new Entity\FieldError(
+                    $event->getEntity()->getField('ISBN'),
+                    'Запрещено менять ISBN код у существующих книг'
+                ));
+            }
+        
+            return $result;
+        }
+
+        public static function getMap()
+        {
+            return [
+                'INT' => [
+                    'data_type' => 'integer',
+                    'primary' => true,
+                    'required' => true,
+                    'title' => Loc::getMessage('MESSAGE_INT'),
+                ],
+                'TIME' => [
+                    'data_type' => 'datetime',
+                    'title' => Loc::getMessage('MESSAGE_TIME'),
+                ],
+            ];
+                            
+            //or
+            return [
+                new Entity\IntegerField('INT'),
+                //new Entity\StringField('ISBN'),
+                //new Entity\StringField('TITLE'),
+                //new Entity\DateField('TIME')
+                new Entity\DateTimeField('TIME')
+            ];
+            
+            //or
+            return [
+                new Entity\BooleanField('NAME', [
+                    'values' => ['N', 'Y']
+                ]),
+                new Entity\EnumField('NAME', [
+                    'values' => ['VALUE1', 'VALUE2', 'VALUE3']
+                ])
+            ];
+            
+            //or
+            return [
+                new Entity\IntegerField('ID', [
+                    'primary' => true, //Primary & autoincrement & required
+                    'autocomplete' => true
+                ])    
+            ];
+            
+            //or
+            return [
+                new Entity\IntegerField('INT', [
+                   'required' => true,
+                   'column_name' => 'ISBNCODE'
+                ]),
+                new Entity\ExpressionField('AGE_DAYS',
+                    'DATEDIFF(NOW(), %s)', ['PUBLISH_DATE']
+                )
+            ];
+            
+            //or
+            return [
+                new Entity\DateField('PUBLISH_DATE', [
+                    'default_value' => new Type\Date
+                ])
+            ];
+            
+            //or
+            return [
+                new Entity\DateField('PUBLISH_DATE', array(
+                    'default_value' => function () {
+                        // figure out last friday date
+                        $lastFriday = date('Y-m-d', strtotime('last friday'));
+                        return new Type\Date($lastFriday, 'Y-m-d');
+                    }
+                ))
+            ];
+            
+            //or
+            return [
+                new Entity\StringField('ISBN', [
+                    'required' => true,
+                    'column_name' => 'ISBNCODE',
+                    'validation' => function($value, $primary, $row, $field) {
+                        return [
+                            new Entity\Validator\RegExp('/[\d-]{13,}/')
+                        ];
+                    }
+                ])
+            ];
+            
+            //or
+            return [
+                new Entity\TextField('EDITIONS_ISBN', [
+                    'save_data_modification' => function () {
+                        return [
+                            function ($value) {
+                                return serialize($value);
+                            }
+                        ];
+                    },
+                    'fetch_data_modification' => function () {
+                        return [
+                            function ($value) {
+                                return unserialize($value);
+                            }
+                        ];
+                    }
+                ])
+            ];
+            
+            //or
+            return [
+                new Entity\TextField('EDITIONS_ISBN', [
+                    'serialized' => true
+                ])
+            ];
+        }
+    }
+```
+
+## Test Converter
+```php
+<?php
+namespace My\Module;
+use \Bitrix\Main\Text\Converter;
+use \Bitrix\Main\Type\DateTime as DTime;
+use \Bitrix\Main\Text\String as Str;
+
+class TestConverter extends Converter
+{
+    public function encode($text, $textType = "")
+    {
+        if ($text instanceof DTime)
+            return $text->format('Y-m-d H:i:s');
+
+        return Str::htmlEncode($text);
+    }
+
+    public function decode($text, $textType = "")
+    {
+        if (is_object($text))
+            return $text;
+
+        return Str::htmlDecode($text);
+    }
+}
+```
+
+## UF Fields
+```php
+<?php
+class BookTable extends Entity\DataManager
+{
+    public static function getUfId()
+    {
+        return 'MY_BOOK';
+    }
+}
+```
