@@ -15,7 +15,6 @@
 
 ## Заказ
 * [Оформление заказа (API d7)](https://github.com/SidiGi/bitrix-info/wiki/%D0%94%D0%BE%D0%B1%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D0%B0-(d7))
-* [Класс компонента(class.php) оформления заказа - минимальный набор (d7)](https://gist.github.com/SidiGi/2f1c3ba4590ebe8460a6ed44e6f4d7d6)
 
 ## Файл настроек (.settings.php)
 * [Основная инфомрация](https://gist.github.com/SidiGi/f6ceccd9e7bdd1d5e12e)
