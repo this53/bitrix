@@ -54,5 +54,77 @@ if (!$result->isSuccess())
 {
     $errors = $result->getErrorMessages();
 }
+```
 
+## Get List
+```php
+<?php
+
+BookTable::getList(array(
+    'select'  => ... // имена полей, которые необходимо получить в результате
+    'filter'  => ... // описание фильтра для WHERE и HAVING
+    'group'   => ... // явное указание полей, по которым нужно группировать результат
+    'order'   => ... // параметры сортировки
+    'limit'   => ... // количество записей
+    'offset'  => ... // смещение для limit
+    'runtime' => ... // динамически определенные поля
+));
+
+//fetchall();
+$result = BookTable::getList($parameters);
+$rows = $result->fetchAll();
+
+$rows = BookTable::getList($parameters)->fetchAll();
+
+//
+BookTable::getList(array(
+    'select' => array('CNT'),
+    'runtime' => array(
+        new Entity\ExpressionField('CNT', 'COUNT(*)')
+    )
+));
+
+//
+BookTable::getById(1);
+BookTable::getByPrimary(array('ID' => 1));
+
+// такие вызовы будут аналогичны следующему вызову getList:
+BookTable::getList(array(
+    'filter' => array('=ID' => 1)
+));
+
+//
+$row = BookTable::getRowById($id);
+
+// аналогичный результат можно получить так:
+$result = BookTable::getById($id);
+$row = $result->fetch();
+
+// или так
+$result = BookTable::getList(array(
+    'filter' => array('=ID' => 1)
+));
+
+$row = $result->fetch();
+
+//
+$row = BookTable::getRow(array(
+    'filter' => array('%=TITLE' => 'Patterns%'),
+    'order' => array('ID')
+));
+
+// аналогичный результат можно получить так:
+$result = BookTable::getList(array(
+    'filter' => array('%=TITLE' => 'Patterns%'),
+    'order' => array('ID')
+    'limit' => 1
+));
+
+$row = $result->fetch();
+
+//// аналогично через Entity\Query
+$q = new Entity\Query(BookTable::getEntity());
+$q->setSelect(array('ISBN', 'TITLE', 'PUBLISH_DATE'));
+$q->setFilter(array('=ID' => 1));
+$result = $q->exec();
 ```
