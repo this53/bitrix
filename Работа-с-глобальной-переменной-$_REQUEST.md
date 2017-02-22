@@ -2,7 +2,11 @@
 <?php
 use \Bitrix\Main\Application;
 $context = Application::getInstance()->getContext();
+
 $request = $context->getRequest();
+//or
+$request = \Bitrix\Main\Context::getCurrent()->getRequest();
+
 //get value
 $value = $request->get("some_name");
 $value = $request["some_name"];
