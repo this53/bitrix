@@ -16,3 +16,10 @@ $connection->enableQueryExecuting();
 /*all disabled queries */
 $queries = $connection->getDisabledQueryExecutingDump();
 ```
+
+```php
+$sqlTracker = $connection->getTracker();
+$sqlTracker->getTime(); //Время выполнения запросов
+$sqlTracker->getCounter(); //Кол-во запросов
+$sqlTracker->getQueries(); //Запросы
+```
